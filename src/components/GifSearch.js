@@ -5,13 +5,11 @@ class GifSearch extends Component {
   render() {
       return (
         <form onSubmit={this.handleSubmit}>
-        <input type="text"  value={this.state.username} />
-
+        <input type="text" value={this.props.searchValue} onChange={this.props.handleChange} />
+       <input type="submit" value="submit" />
       </form>
       )
     }
-
-
 }
 
 export default GifSearch
