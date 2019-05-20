@@ -16,7 +16,7 @@ class GifListContainer extends Component {
    this.handleChange = this.handleChange.bind(this)
  }
 
-handlechange(event) {
+handleChange(event) {
   this.setState({
     searchValue:event.target.value
   })
@@ -36,17 +36,14 @@ getFetch() {
      this.getFetch()
   }
 
-  <GifList>
-
   render() {
       return (
         <div>
-        <GifSearch gifs={this.props.handleSubmit} />
+        <GifList gifs={this.state.gifs}/>
+        <GifSearch handleChange={this.handleChange} handleSubmit={this.handleSubmit} searchValue={this.state.searchValue}/>
         </div>
       )
     }
-
-
 }
 
 export default GifListContainer
