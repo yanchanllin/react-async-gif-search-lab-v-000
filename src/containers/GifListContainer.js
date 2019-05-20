@@ -1,16 +1,39 @@
 import React, { Component } from 'react';
+import GifList from '../components/GifList'
+import GifSearch from '../components/GifSearch'
+const Api ='http://api.giphy.com/v1/gifs/search?q=';
+const key ='dc6zaTOxFJmzC&rating=g'
 
 class GifListContainer extends Component {
+ constructor(props){
+   super()
+
+   this.state=({
+     gifs: []
+     searchValue:''
+   })
+   this.handleSubmit = this.handleSubmit.bind(this)
+   this.handleChange = this.handleChange.bind(this)
+ }
+ 
+handlechange(event) {
+  this.setState({
+    searchValue:event.target.value
+  }) 
+}
+
+getFetch() {
+  let request = this.state.searchValue
+  fetch(Api + request + Key)
+     .then(response => response.json())
+     .then(data => this.setState({
+       gifs: data.data.slice(0,3)
+     }))
+ }
 
   handleSubmit = event => {
     event.preventDefault()
-    fetch('http://api.giphy.com/v1/gifs/search?q=YOUR QUERY HERE&api_key=dc6zaTOxFJmzC&rating=g', {
-      method: "POST",
-      headers: {
-        'Content-Type: app/json'
-      },
-      body: JSON.stringify(this.state)
-    })
+     this.getFetch()
   }
 
   <GifList>
