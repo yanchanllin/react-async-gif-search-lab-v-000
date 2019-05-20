@@ -16,7 +16,7 @@ class GifListContainer extends Component {
   render() {
       return (
         <div>
-          <button onClick={this.handleSubmit}>Click to Fetch!</button>
+          <button onClick={this.props.handleSubmit}>Click to Fetch!</button>
         </div>
       )
     }
