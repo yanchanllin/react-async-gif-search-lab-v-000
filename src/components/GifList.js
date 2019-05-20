@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 
 class GifList extends Component {
-
-each.gif
-
   render() {
       return (
         <div>
@@ -15,8 +12,6 @@ each.gif
         </div>
       )
     }
-
-
 }
 
 export default GifList
