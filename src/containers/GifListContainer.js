@@ -15,11 +15,11 @@ class GifListContainer extends Component {
    this.handleSubmit = this.handleSubmit.bind(this)
    this.handleChange = this.handleChange.bind(this)
  }
- 
+
 handlechange(event) {
   this.setState({
     searchValue:event.target.value
-  }) 
+  })
 }
 
 getFetch() {
