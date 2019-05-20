@@ -18,7 +18,7 @@ class GifListContainer extends Component {
   render() {
       return (
         <div>
-          <GifSearch this.submitHandler.props />
+          <GifSearch gifs={this.props.submitHandler} />
         </div>
       )
     }
