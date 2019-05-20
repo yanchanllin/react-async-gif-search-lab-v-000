@@ -13,10 +13,12 @@ class GifListContainer extends Component {
     })
   }
 
+  <GifList>
+
   render() {
       return (
         <div>
-          <button onClick={this.props.handleSubmit}>Click to Fetch!</button>
+        <GifSearch gifs={this.props.handleSubmit} />
         </div>
       )
     }
