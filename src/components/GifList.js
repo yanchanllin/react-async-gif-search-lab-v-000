@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class GifList extends Component {
 
-each.gif 
+each.gif
 
   render() {
       return (
