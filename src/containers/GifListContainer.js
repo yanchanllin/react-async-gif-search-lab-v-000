@@ -11,7 +11,7 @@ class GifListContainer extends Component {
       body: JSON.stringify(this.state)
     })
   }
-   
+
   render() {
       return (
         <div>
