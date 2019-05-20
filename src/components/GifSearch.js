@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 
 class GifSearch extends Component {
 
-each.gif
-
   render() {
       return (
         <form onSubmit={this.handleSubmit}>
